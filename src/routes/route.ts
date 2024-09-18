@@ -3,8 +3,8 @@ import { createChat } from "../controllers/controller.js";
 
 const router = Router();
 
-router.post("/", createChat);
-router.all("/", (req, res) => {
+router.post("/chat", createChat);
+router.all("/", (_req, res) => {
   res.status(405).json({ error: "허용되지 않은 메서드 입니다." });
 });
 
