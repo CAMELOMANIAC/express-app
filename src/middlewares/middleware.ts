@@ -2,7 +2,7 @@ import cors from "cors";
 import { NextFunction, Request, Response } from "express";
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: process.env.CORS_ORIGIN,
 };
 
 export const corsMiddleware = cors(corsOptions);
